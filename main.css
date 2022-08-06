@@ -1,0 +1,143 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal; 
+}
+
+header {
+  position: relative;
+  background: url(https://i.pinimg.com/originals/54/e1/6b/54e16bce7194e008f03a14eac2270d9a.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2;
+}
+
+.header {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  padding: 50px;  
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: helvetica;
+  }
+
+  
+  .calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(3,120px);
+  grid-template-rows: minmax(120px, auto) repeat(0,60px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(93, 175, 73, 0.781);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(127, 218, 104, .9);
+}
+
+.span-two {
+  grid-column: span 1;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgb(a, a, a, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 2.5rem;
+}
+
+  div.header{
+    color: #d0e2eb;
+    position: fixed;
+    top: 75px;
+    left: 775px;
+    height: 20px;
+    width: 550px;
+    box-sizing: border-box;
+    text-shadow: 2px 1px 1px #000;
+  }
+
+  .btn {
+    position: absolute;
+    top: 20px;
+    left: 1850px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+  }
+  
+  div.msg {
+    color: #4d97c0;
+    position: fixed;
+    top: 320px;
+    left: 535px;
+    height: 20px;
+    width: 1150px;
+    box-sizing: border-box;
+    font-family: "Times New Roman";
+    font-weight: 700;
+    font-style: oblique;
+    font-size: xx-large;
+    text-shadow: 2px 1px 1px #000;
+  }
+
+  .light-theme {
+    --bg: var(--green);
+    --fontColor: var(--white);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+  }
+  
+
+  .dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+  }
+
+  
