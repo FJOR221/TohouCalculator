@@ -1,23 +1,14 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: Gotham Rounded, sans-serif;
-  font-weight: normal; 
-}
-
 body {
-    padding: 0;
-    margin: 0;
-    font-family: helvetica;
-  }
-
-header {
-  position: relative;
-  background: url(https://i.pinimg.com/originals/54/e1/6b/54e16bce7194e008f03a14eac2270d9a.jpg);
-  -webkit-background-size: cover;
-          background-size: cover;
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
 }
 
-header:after {
+.headline {
+  position: absolute;
+}
+
+.headline:after {
   content: '';
   position: absolute;
   top: 0;
@@ -25,37 +16,42 @@ header:after {
   right: 0;
   bottom: 0;
   background: rgba(0,0,0,.5);
-  z-index: 2;
+  z-index: 1;
+
 }
 
   
-  .calculator-grid {
+  div.calculator-grid {
   display: grid;
   justify-content: center;
   align-content: center;
   align-items: center;
-  min-height: 100vh;
   grid-template-columns: repeat(3,120px);
   grid-template-rows: minmax(120px, auto) repeat(0,60px);
+  z-index: 2;
+  height: 1000px;
 }
 
-.calculator-grid > button {
+  .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
   border: 1px solid white;
   outline: none;
   background-color: rgba(93, 175, 73, 0.781);
+  z-index: 2;
 }
 
-.calculator-grid > button:hover {
+  .calculator-grid > button:hover {
   background-color: rgba(127, 218, 104, .9);
+  z-index: 2;
 }
 
-.span-two {
+  .span-two {
   grid-column: span 1;
+  z-index: 2;
 }
 
-.output {
+  .output {
   grid-column: 1 / -1;
   background-color: rgb(a, a, a, .75);
   display: flex;
@@ -65,47 +61,54 @@ header:after {
   padding: 10px;
   word-wrap: break-word;
   word-break: break-all;
+  z-index: 2;
 }
 
-.output .previous-operand {
-  color: rgba(0, 0, 0, 0.75);
+  .output .previous-operand {
+  color: rgba(218, 218, 218, 0.75);
   font-size: 1.5rem;
+  z-index: 2;
 }
 
-.output .current-operand {
-  color: rgba(0, 0, 0, 0.75);
+  .output .current-operand {
+  color: rgba(218, 218, 218, 0.75);
   font-size: 2.5rem;
+  z-index: 2;
 }
 
   div.header{
     color: #d0e2eb;
-    position: fixed;
+    position: absolute;
     top: 75px;
-    left: 775px;
+    left: 765px;
     height: 20px;
     width: 550px;
     box-sizing: border-box;
     text-shadow: 2px 1px 1px #000;
-  }
+    z-index: 2;
+}
 
-  .btn {
+  div.btn {
     position: absolute;
-    top: 20px;
-    left: 1850px;
-    height: 50px;
+    top: 120px;
+    left: 700px;
+    height: 350px;
     width: 50px;
     border-radius: 50%;
     border: none;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
-  }
-  
+    z-index: 2;
+}
+
+
   .light-theme {
     --bg: var(--green);
     --fontColor: var(--white);
     --btnBg: var(--black);
     --btnFontColor: var(--white);
-  }
+    z-index: 2;
+}
   
 
   .dark-theme {
@@ -113,6 +116,7 @@ header:after {
     --fontColor: var(--green);
     --btnBg: var(--white);
     --btnFontColor: var(--black);
-  }
+    z-index: 2;
+}
 
   
